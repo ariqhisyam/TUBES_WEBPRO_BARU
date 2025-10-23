@@ -1,0 +1,321 @@
+.information-bill-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.bill-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.vehicle-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.vehicle-img {
+  margin-bottom: 1rem;
+}
+
+.car-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.car-image:hover {
+  transform: scale(1.05);
+}
+
+.platNomor {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.vehicle-model {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.date-section {
+  margin-bottom: 2rem;
+}
+
+.date-entry {
+  margin-bottom: 1.5rem;
+}
+
+.date-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.date-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.calendar-icon {
+  width: 32px;
+  height: 32px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.date-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.service-details-section {
+  margin-bottom: 2rem;
+  border-top: 1px solid #e9ecef;
+  padding-top: 1.5rem;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+}
+
+.service-icon {
+  flex-shrink: 0;
+}
+
+.blue-circle {
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+.service-description {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.service-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: right;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.total-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.total-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.action-section {
+  text-align: right;
+}
+
+.change-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.change-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .information-bill-card {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .bill-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .vehicle-model {
+    font-size: 1.1rem;
+  }
+  
+  .date-text {
+    font-size: 0.9rem;
+  }
+  
+  .calendar-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .calendar-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .service-details-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-item {
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+  }
+  
+  .service-description {
+    font-size: 0.9rem;
+  }
+  
+  .service-price {
+    font-size: 0.9rem;
+  }
+  
+  .total-label,
+  .total-price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .information-bill-card {
+    padding: 1rem;
+  }
+  
+  .bill-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .vehicle-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .car-image {
+    width: 100px;
+    height: 65px;
+  }
+  
+  .license-plate {
+    font-size: 0.9rem;
+  }
+  
+  .vehicle-model {
+    font-size: 1rem;
+  }
+  
+  .date-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .date-entry {
+    margin-bottom: 1rem;
+  }
+  
+  .date-label {
+    font-size: 0.8rem;
+  }
+  
+  .date-item {
+    gap: 0.5rem;
+  }
+  
+  .calendar-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .calendar-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .date-text {
+    font-size: 0.85rem;
+  }
+  
+  .change-link {
+    font-size: 0.9rem;
+  }
+  
+  .service-details-section {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .service-item {
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    margin-bottom: 0.75rem;
+  }
+  
+  .blue-circle {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .service-description {
+    font-size: 0.85rem;
+  }
+  
+  .service-price {
+    font-size: 0.85rem;
+  }
+  
+  .total-section {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+  }
+  
+  .total-label,
+  .total-price {
+    font-size: 0.9rem;
+  }
+}

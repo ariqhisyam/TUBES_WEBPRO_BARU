@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dashboardadmin.css" />
+    <link rel="stylesheet" href="bilsStyle.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Admin Page</div>
+      <ul class="nav-links">
+        <li><a href="dashboardadmin.html">Home</a></li>
+        <li><a href="GenerateKey.html">Generate Key</a></li>
+        <li><a href="bils2.html">Bills</a></li>
+        <li><a href="informationBils.html">Information Bills</a></li>
+        <li><a href="LaporanPenolakan.html">Laporan Penolakan</a></li>
+      </ul>
+      <button class="btn-login">Logout</button>
+    </nav>
+
+    <div class="container">
+      <div class="vehicle-card">
+        <div class="card-content">
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">Honda Lamborghini</h3>
+            <p class="vehicle-date">23/10/2025</p>
+            <a href="#" class="see-bill-link">See Bill</a>
+          </div>
+          <div class="vehicle-image-section">
+            <div class="vehicle-image">
+              <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" 
+                   alt="" 
+                   class="car-image">
+            </div>
+            <p class="platNomor">D 123 SS</p>
+          </div>
+        </div>
+      </div>
+      
+      <form class="wrapper-form">
+        <div class="form">
+          <label for="ac-nominal">AC Tidak Dingin</label>
+          <input
+            type="number"
+            placeholder="Masukan Nominal (Rp)"
+          />
+          <input
+            placeholder="Nama Sparepart yang di ganti"
+            type="text"
+          />
+        </div>
+        <div class="form">
+          <label for="mesin-nominal">Mesin Tidak Panas</label>
+          <input
+            placeholder="Masukan Nominal (Rp)"
+            type="number"
+          />
+          <input
+            placeholder="Nama Sparepart yang di ganti"
+            type="text"
+          />
+        </div>
+        <div class="form">
+          <label for="radiator-nominal">Air Radiator Habis</label>
+          <input
+            placeholder="Masukan Nominal (Rp)"
+          />
+          <input
+            placeholder="Nama Sparepart yang di ganti"
+            type="text"
+          />
+        </div>
+        <div class="wrapper-button">
+          <button type="submit" class="btn-submit">Done</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
