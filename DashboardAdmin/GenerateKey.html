@@ -1,93 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboardadmin.css">
-    <link rel="stylesheet" href="generateKey.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboardadmin.css" />
+    <link rel="stylesheet" href="generateKey.css" />
     <title>Generate Key</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="logo">Admin Page</div>
-        <ul class="nav-links">
-            <li><a href="dashboardadmin.html">Home</a></li>
-            <li><a href="GenerateKey.html">Generate Key</a></li>
-            <li><a href="bils2.html">Bills</a></li>
-            <li><a href="informationBils.html">Information Bills</a></li>
-            <li><a href="LaporanPenolakan.html">Laporan Penolakan</a></li>
-        </ul>
-        <button class="btn-login">Logout</button>
+      <div class="logo">Admin Page</div>
+      <ul class="nav-links">
+        <li><a href="dashboardadmin.html">Home</a></li>
+        <li><a href="GenerateKey.html">Generate Key</a></li>
+        <li><a href="bils2.html">Bills</a></li>
+        <li><a href="informationBils.html">Information Bills</a></li>
+        <li><a href="LaporanPenolakan.html">Laporan Penolakan</a></li>
+      </ul>
+      <button class="btn-login">Logout</button>
     </nav>
 
-
     <div class="container">
-        <div class="generate-form-section">
-            <form class="key-form">
-                <div class="form-group">
-                    <select class="form-select" required>
-                        <option value="" disabled selected>Pilih Role</option>
-                        <option value="admin">Admin</option>
-                        <option value="mechanic">Mechanic</option>
-                        <option value="driver">Driver</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <input 
-                        type="text" 
-                        class="form-input" 
-                        placeholder="Masukkan User Name" 
-                        required
-                    >
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group key-input-group">
-                        <input 
-                            type="text" 
-                            class="form-input key-input" 
-                            placeholder="Key akan di-generate otomatis" 
-                            readonly
-                        >
-                    </div>
-                    <button type="button" class="btn-generate-key">Generate Key</button>
-                </div>
-                
-                <button type="submit" class="btn-simpan">SIMPAN</button>
-            </form>
+      <div class="generate-form-section">
+        <form class="key-form">
+          <div class="form-group">
+            <select class="form-select" required>
+              <option value="" disabled selected>Pilih Role</option>
+              <option value="admin">Admin</option>
+              <option value="mechanic">Mechanic</option>
+              <option value="driver">Driver</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Masukkan User Name"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group key-input-group">
+              <input
+                type="text"
+                class="form-input key-input"
+                placeholder="Key akan di-generate otomatis"
+                readonly
+              />
+            </div>
+            <button type="button" class="btn-generate-key">Generate Key</button>
+          </div>
+
+          <button type="submit" class="btn-simpan">SIMPAN</button>
+        </form>
+      </div>
+
+      <div class="table-section">
+        <div class="table-header">
+          <h3 class="table-title">List Key</h3>
         </div>
 
- 
-        <div class="table-section">
-            <div class="table-header">
-                <h3 class="table-title">List Key</h3>
-            </div>
-            
-            <div class="table-container">
-                <table class="key-table">
-                    <thead>
-                        <tr>
-                            <th class="role-header">Role</th>
-                            <th class="username-header">User Name</th>
-                            <th class="key-header">Key</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Admin</td>
-                            <td>Relingga Aditya</td>
-                            <td>P B4L4P 88</td>
-                        </tr>
-                        <tr>
-                            <td>Driver</td>
-                            <td>Ariq Hisyam Nabil</td>
-                            <td>B 2345 CC</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="table-container">
+          <table class="key-table">
+            <thead>
+              <tr>
+                <th class="role-header">Role</th>
+                <th class="username-header">User Name</th>
+                <th class="key-header">Key</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Admin</td>
+                <td>Relingga Aditya</td>
+                <td>P B4L4P 88</td>
+              </tr>
+              <tr>
+                <td>Driver</td>
+                <td>Ariq Hisyam Nabil</td>
+                <td>B 2345 CC</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
-</body>
+    <script>
+      const btnKey = document.querySelector(".btn-generate-key");
+      btnKey.addEventListener("click", function () {
+        const keyInput = document.querySelector(".key-input");
+        const generatedKey = Math.random()
+          .toString(36)
+          .substr(2, 9)
+          .toUpperCase();
+        keyInput.value = generatedKey;
+      });
+
+      const keyForm = document.querySelector(".key-form");
+      keyForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Key berhasil disimpan!");
+        keyForm.reset();
+      });
+    </script>
+  </body>
 </html>
