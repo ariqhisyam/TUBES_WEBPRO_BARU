@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="DashboardDriver.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="profile">
+        <img src="https://via.placeholder.com/100" alt="Foto Driver" />
+        <div>
+          <div class="name">Relingga Aditya</div>
+          <div class="date" id="current-date"></div>
+        </div>
+      </div>
+      <h1>Welcome to Driver Dashboard</h1>
+    </nav>
+
+    <div class="main-content">
+      <!-- Card Utama untuk Buat Laporan Kendaraan -->
+      <div class="main-card">
+        <div class="bus-illustration">
+          <div class="bus-icon">🚌</div>
+        </div>
+        <button class="create-report-btn">Buat laporan kendaraan</button>
+      </div>
+
+      <!-- Section Ready to use -->
+      <h2 class="ready-to-use">Ready to use</h2>
+
+      <!-- Card Kendaraan -->
+      <div class="vehicle-cards">
+        <!-- Card Nissan Terrano -->
+        <div class="vehicle-card">
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Nissan Terrano 2014</h3>
+            <p class="vehicle-status">Status: <span class="status-on-use">On Use</span></p>
+          </div>
+          <div class="vehicle-visual">
+            <div class="vehicle-icon">🚙</div>
+            <p class="license-plate">B 4121 QQ</p>
+          </div>
+        </div>
+
+        <!-- Card Toyota Fortuner -->
+        <div class="vehicle-card">
+          <div class="vehicle-info">
+            <h3 class="vehicle-name">Toyota Fortuner 2012</h3>
+            <p class="vehicle-status">Status: <span class="status-free">Free</span></p>
+          </div>
+          <div class="vehicle-visual">
+            <div class="vehicle-icon">🚙</div>
+            <p class="license-plate">B 4317 SLK</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Menampilkan tanggal saat ini
+      const currentDate = new Date();
+      const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      };
+      document.getElementById('current-date').textContent = currentDate.toLocaleDateString('id-ID', options);
+    </script>
+  </body>
+</html>

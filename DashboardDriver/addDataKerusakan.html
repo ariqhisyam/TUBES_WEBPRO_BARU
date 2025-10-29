@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data Kerusakan</title>
+    <link rel="stylesheet" href="addDataKerusakan.css">
+    <link rel="stylesheet" href="DashboardDriver.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="profile">
+          <img src="https://via.placeholder.com/100" alt="Foto Driver" />
+          <div>
+            <div class="name">Relingga Aditya</div>
+            <div class="date" id="current-date"></div>
+          </div>
+        </div>
+        <h1>Welcome to Driver Dashboard</h1>
+    </nav>
+
+    <div class="form-container">
+ 
+        <div class="bus-illustration-form">
+            <div class="bus-icon-form">🚌</div>
+        </div>
+
+        <!-- Form Input Nomor Plat -->
+        <div class="form-section">
+            <label class="form-label">Masukkan Nomor Plat</label>
+            <input type="text" class="form-input" value="D 1749 AZQ" placeholder="Masukkan nomor plat kendaraan">
+        </div>
+
+        <!-- Section Kendala -->
+        <div class="form-section">
+            <label class="form-label">Kendala</label>
+            <button class="add-btn" id="btn-tambah-kendala">
+                <span class="add-icon">+</span>
+                Tambah Kendala Pada Kendaraan
+            </button>
+            
+            <div class="checkbox-list" id="kendala-list">
+              
+            </div>
+        </div>
+
+        <!-- Section Catatan -->
+        <div class="form-section">
+            <label class="form-label">Catatan</label>
+            <textarea class="form-textarea" placeholder="Tambahkan catatan tambahan..."></textarea>
+        </div>
+
+ 
+        <button id="btn-kirim-laporan" class="submit-btn">Kirim Laporan</button>
+    </div>
+
+
+    <div class="modal" id="modal-kendala">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Tambah Kendala Baru</h2>
+            <input type="text" id="input-kendala" class="form-input" placeholder="Masukkan kendala baru...">
+            <div class="modal-buttons">
+                <button class="btn-cancel">Batal</button>
+                <button class="btn-save" id="save-kendala">Simpan</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+ 
+        const currentDate = new Date();
+        const options = { 
+          weekday: 'long', 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        };
+        document.getElementById('current-date').textContent = currentDate.toLocaleDateString('id-ID', options);
+
+       
+        const modalKendala = document.getElementById('modal-kendala');
+        const btnTambahKendala = document.getElementById('btn-tambah-kendala');
+        const btnSaveKendala = document.getElementById('save-kendala');
+        const btnKirimLaporan = document.getElementById('btn-kirim-laporan');
+        const inputKendala = document.getElementById('input-kendala');
+        const kendalaList = document.getElementById('kendala-list');
+        const closeModal = document.querySelector('.close-modal');
+        const btnCancel = document.querySelector('.btn-cancel');
+
+   
+        btnTambahKendala.addEventListener('click', () => {
+            modalKendala.style.display = 'block';
+            inputKendala.focus();
+        });
+
+ 
+        closeModal.addEventListener('click', () => {
+            modalKendala.style.display = 'none';
+            inputKendala.value = '';
+        });
+
+        btnCancel.addEventListener('click', () => {
+            modalKendala.style.display = 'none';
+            inputKendala.value = '';
+        });
+
+        btnSaveKendala.addEventListener('click', () => {
+            const kendalaValue = inputKendala.value.trim();
+            
+            if (kendalaValue === '') {
+                alert('Masukkan kendala terlebih dahulu!');
+                return;
+            }
+
+            const checkboxItem = document.createElement('label');
+            checkboxItem.className = 'checkbox-item';
+            
+            const kendalaId = kendalaValue.toLowerCase().replace(/\s+/g, '-') + '-' + Date.now();
+            
+            checkboxItem.innerHTML = `
+                <input type="checkbox" name="kendala" value="${kendalaId}">
+                <span>${kendalaValue}</span>
+                <button class="btn-delete-kendala" type="button">🗑️</button>
+            `;
+            
+      
+            kendalaList.appendChild(checkboxItem);
+
+            const deleteBtn = checkboxItem.querySelector('.btn-delete-kendala');
+            deleteBtn.addEventListener('click', () => {
+                checkboxItem.remove();
+            });
+
+            inputKendala.value = '';
+            modalKendala.style.display = 'none';
+        });
+
+    
+        window.addEventListener('click', (event) => {
+            if (event.target === modalKendala) {
+                modalKendala.style.display = 'none';
+                inputKendala.value = '';
+            }
+        });
+   
+        btnKirimLaporan.addEventListener('click', () => {
+            alert('Laporan berhasil dikirim!');
+        });
+    </script>
+</body>
+</html>
