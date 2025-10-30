@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle Detail Page</title>
+ <link rel="stylesheet" href="detailkendaraan.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Tombol Back -->
+    <button class="btn-back" onclick="history.back()">← Back</button>
+
+    <div class="vehicle-header">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" alt="Mobil">
+      <h2>Toyota Avanza</h2>
+      <p>Plat Nomor: B 1234 XYZ</p>
+      <span class="status fatal">Fatal</span>
+    </div>
+
+    <div class="notes">
+      <label for="notes">Notes (Rincian Kerusakan):</label>
+      <textarea id="notes" readonly>
+Mesin mengeluarkan suara kasar, oli bocor di bagian bawah, dan indikator check engine menyala.
+      </textarea>
+    </div>
+
+    <div class="issues">
+      <label>Kendala Ditemukan:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="issue" value="engine"> Masalah Mesin</label>
+        <label><input type="checkbox" name="issue" value="oil"> Kebocoran Oli</label>
+        <label><input type="checkbox" name="issue" value="electrical"> Sistem Kelistrikan</label>
+        <label><input type="checkbox" name="issue" value="brake"> Rem Kurang Pakem</label>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn-pending">Mark as Pending</button>
+      <button class="btn-upload">Upload Bill</button>
+      <button class="btn-done">Done</button>
+    </div>
+  </div>
+</body>
+</html>
