@@ -36,7 +36,9 @@
         <div class="vehicle-card">
           <div class="vehicle-info">
             <h3 class="vehicle-name">Nissan Terrano 2014</h3>
-            <p class="vehicle-status">Status: <span class="status-on-use">On Use</span></p>
+            <p class="vehicle-status">
+              Status: <span class="status-on-use">On Use</span>
+            </p>
           </div>
           <div class="vehicle-visual">
             <div class="vehicle-icon">🚙</div>
@@ -48,7 +50,9 @@
         <div class="vehicle-card">
           <div class="vehicle-info">
             <h3 class="vehicle-name">Toyota Fortuner 2012</h3>
-            <p class="vehicle-status">Status: <span class="status-free">Free</span></p>
+            <p class="vehicle-status">
+              Status: <span class="status-free">Free</span>
+            </p>
           </div>
           <div class="vehicle-visual">
             <div class="vehicle-icon">🚙</div>
@@ -61,13 +65,20 @@
     <script>
       // Menampilkan tanggal saat ini
       const currentDate = new Date();
-      const options = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
+      const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
       };
-      document.getElementById('current-date').textContent = currentDate.toLocaleDateString('id-ID', options);
+      document.getElementById("current-date").textContent =
+        currentDate.toLocaleDateString("id-ID", options);
+
+      //  "Buat laporan kendaraan"
+      const createReportBtn = document.querySelector(".create-report-btn");
+      createReportBtn.addEventListener("click", () => {
+        window.location.href = "addDataKerusakan.html";
+      });
     </script>
   </body>
 </html>
