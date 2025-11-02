@@ -173,9 +173,6 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-}
-
-.btn-submit {
   background: rgb(0, 153, 255);
   color: white;
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Kendaraan</title>
+  <link rel="stylesheet" href="detailkendaraan.css" />
+</head>
+<body>
+
+
+  <!-- DETAIL CONTENT-->
+  <div class="container">
+    <div class="car-header">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=80" alt="Car Image">
+      <div class="car-info">
+        <h2>Toyota Avanza</h2>
+        <p>Plat Nomor: B 1234 XYZ</p>
+      </div>
+    </div>
+
+    <div class="notes">
+      <label for="notes" val>Notes (Rincian Kerusakan):</label>
+     <textarea id="notes" readonly>Kendaraan brebet, tenaga tidak ngisi, bensin boros.</textarea>
+    </div>
+
+    <div class="issues">
+      <h3>Daftar Kendala:</h3>
+      <ul>
+        <li>Rem berbunyi saat ditekan</li>
+        <li>Oli bocor di bagian mesin</li>
+        <li>AC tidak dingin</li>
+      </ul>
+    </div>
+
+    <div class="form-section">
+      <label for="mechanic">Pilih Mekanik:</label>
+      <select id="mechanic">
+        <option value="">Pilih Mekanik</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+      </select>
+    </div>
+
+    <div class="form-section">
+      <label for="date">Atur Tanggal Pengerjaan:</label>
+      <input type="date" id="date" />
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-accept">Accept</button>
+      <button class="btn btn-decline">Decline</button>
+      <a href="/DashboardAdmin/dashboardadmin.html"><button class="btn btn-done">Done</button></a>
+    </div>
+  </div>
+
+</body>
+</html>
