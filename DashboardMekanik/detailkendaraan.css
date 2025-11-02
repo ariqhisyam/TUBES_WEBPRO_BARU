@@ -1,0 +1,169 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f6f8fa;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      background: white;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      position: relative;
+    }
+
+    /* Tombol Back */
+    .btn-back {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background-color: #576574;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-back:hover {
+      background-color: #404852;
+    }
+
+    .vehicle-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 24px;
+    }
+
+    .vehicle-header img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      object-fit: cover;
+    }
+
+    .vehicle-header h2 {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .vehicle-header p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .status.fatal {
+      background-color: #ff6b6b;
+      color: white;
+    }
+
+    .status.low {
+      background-color: #feca57;
+      color: #222;
+    }
+
+    .notes {
+      margin-bottom: 20px;
+    }
+
+    .notes label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .notes textarea {
+      width: 100%;
+      height: 80px;
+      resize: none;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      background-color: #f9f9f9;
+    }
+
+    .notes textarea[readonly] {
+      color: #333;
+      cursor: not-allowed;
+    }
+
+    .issues {
+      margin-bottom: 24px;
+    }
+
+    .issues label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .checkbox-group label {
+      font-weight: 400;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .buttons button {
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .btn-pending {
+      background-color: #feca57;
+      color: #333;
+    }
+
+    .btn-upload {
+      background-color: #54a0ff;
+      color: white;
+    }
+
+    .btn-done {
+      background-color: #1dd1a1;
+      color: white;
+    }
+
+    .buttons button:hover {
+      opacity: 0.9;
+    }
